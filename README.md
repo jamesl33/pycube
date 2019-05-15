@@ -1,8 +1,11 @@
-#!/usr/bin/env python3
-"""
-This file is part of pycube.
+pycube
+------
+pycube is a Python application which simply displays a 3D rotating cube, it
+was created for the purpose of learning about rotation vectors.
 
-Copyright (C) 2019, James Lee <jamesl33info@gmail.com>.
+License
+-------
+Copyright (C) 2019 James Lee <jamesl33info@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -16,11 +19,3 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-"""
-
-import pygame
-
-FPS = 120
-
-DISPLAY = pygame.Rect(0, 0, 600, 400)
-BACKGROUND = pygame.Rect(0, 0, 600, 400)
