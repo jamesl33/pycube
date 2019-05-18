@@ -38,8 +38,8 @@ class Cube():
         ]
 
     def _rotate(self, matrix):
-        for index in range(len(self._points)):
-            self._points[index] = np.matmul(matrix, self._points[index])
+        for index, point in enumerate(self._points):
+            self._points[index] = np.matmul(matrix, point)
 
     def rotateX(self, degree):
         theta = np.radians(degree)
