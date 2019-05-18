@@ -22,5 +22,5 @@ import pygame
 
 FPS = 120
 
-DISPLAY = pygame.Rect(0, 0, 600, 400)
-BACKGROUND = pygame.Rect(0, 0, 600, 400)
+DISPLAY = pygame.Rect(0, 0, 1000, 400)
+BACKGROUND = pygame.Rect(0, 0, 1000, 400)

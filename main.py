@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import pygame
 
 from constants import FPS, DISPLAY, BACKGROUND
+from hypercube import Hypercube
 from cube import Cube
 
 
@@ -29,6 +30,7 @@ class CubeSimulation():
         self._display = pygame.display.set_mode(DISPLAY.size)
         self._background = pygame.Surface(BACKGROUND.size)
         self._clock = pygame.time.Clock()
+        self._hypercube = Hypercube()
         self._cube = Cube()
 
     def start(self):
@@ -38,11 +40,16 @@ class CubeSimulation():
     def _update(self):
         self._clock.tick(FPS)
         self._handle_input(pygame.key.get_pressed())
-        self._cube.rotateX(0.5)
-        self._cube.rotateY(0.5)
-        self._cube.rotateZ(0.5)
         self._display.fill((0, 0, 0))
+
+        self._cube.rotateX(0.5)
+        self._cube.rotateY(0.25)
         self._cube.draw(self._display)
+
+        self._hypercube.rotateY(0.5)
+        self._hypercube.rotateW(0.25)
+        self._hypercube.draw(self._display)
+
         pygame.display.update()
 
     def _handle_input(self, keys):

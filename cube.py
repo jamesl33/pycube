@@ -21,6 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import pygame
 import numpy as np
 
+from constants import DISPLAY
+
 
 class Cube():
     def __init__(self):
@@ -87,8 +89,8 @@ class Cube():
             point = point * 100
             pygame.draw.circle(surface,
                                (255, 255, 255),
-                               (int(point[0] + surface.get_size()[0] / 2),
-                                int(point[1] + surface.get_size()[1] / 2)),
+                               (int(point[0] + DISPLAY[2] / 4),
+                                int(point[1] + DISPLAY[3] / 2)),
                                10)
 
         for index in range(4):
@@ -103,5 +105,5 @@ class Cube():
 
         pygame.draw.line(surface,
                          (255, 255, 255),
-                         (a[0] + surface.get_size()[0] / 2, a[1] + surface.get_size()[1] / 2),
-                         (b[0] + surface.get_size()[0] / 2, b[1] + surface.get_size()[1] / 2))
+                         (a[0] + DISPLAY[2] / 4, a[1] + DISPLAY[3] / 2),
+                         (b[0] + DISPLAY[2] / 4, b[1] + DISPLAY[3] / 2))
